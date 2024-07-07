@@ -28,5 +28,7 @@ jobs:
       run: npm run start &
     - name: Display SoftUni Username
       run: echo "murkata86"
+    - name: Start the Unit tests
+      run: npm run test:unit
 
 
