@@ -34,4 +34,16 @@ jobs:
     - name: Start the UI tests
       run: npm run test:ui
 
+  Deploy_App:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    needs: build_and_test
+    steps:
+      - name: Deploy backend
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ secrets.Backend_Key }}
+          api-key: ${{ secrets.Render_API_Key }}
+
+
 
