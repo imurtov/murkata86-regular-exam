@@ -39,7 +39,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     needs: build_and_test
     steps:
-      - name: Deploy backend
+      - name: Deploy_In_Render
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
           service-id: ${{ secrets.Backend_Key }}
