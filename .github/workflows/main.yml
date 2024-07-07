@@ -36,7 +36,7 @@ jobs:
 
   Deploy_App:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     needs: build_and_test
     steps:
       - name: Deploy_In_Render
