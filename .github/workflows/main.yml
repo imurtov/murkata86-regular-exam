@@ -29,5 +29,7 @@ jobs:
       run: echo "murkata86"
     - name: Start the Unit tests
       run: npm run test:unit
+    - name: Start the UI tests
+      run: npm run test:ui
 
 
